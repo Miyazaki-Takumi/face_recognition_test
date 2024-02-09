@@ -1,0 +1,6 @@
+/deploy.prototxt
+/history.db
+/res10_300x300_ssd_iter_140000.caffemodel
+/SFace_face_recognition
+/SFace_test
+/test.py
