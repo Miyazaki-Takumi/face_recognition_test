@@ -125,12 +125,12 @@ def main(img_path):
 
     # face_figフォルダのnpyファイルを作成
     generate_feature.main()
-    
+
 
     # キャプチャを開く
-    # capture = cv2.VideoCapture(img_path) # 画像ファイル
+    capture = cv2.VideoCapture(img_path) # 画像ファイル
     # capture = cv2.VideoCapture("hoshino.mp4") # 動画
-    capture = cv2.VideoCapture(0) # カメラ
+    # capture = cv2.VideoCapture(0) # カメラ
     if not capture.isOpened():
         print("no file or camera")
         exit()
@@ -181,7 +181,7 @@ def main(img_path):
 
         # 画像を表示する
         cv2.imshow("face recognition", image)
-        # cv2.imwrite(os.path.join(f"{img_path}_recognized.jpg"), image) # 動画・カメラの場合は要コメントアウト
+        cv2.imwrite(os.path.join(f"{img_path}_recognized.jpg"), image) # 動画・カメラの場合は要コメントアウト
 
         key = cv2.waitKey(1)
         if key == ord('q'):
@@ -190,7 +190,7 @@ def main(img_path):
     cv2.destroyAllWindows()
 
 if __name__ == '__main__':
-    main("image3.jpg")
+    main("image.jpg")
 
 
 # sqlite記述関数を作る。
